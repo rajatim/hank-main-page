@@ -74,14 +74,11 @@
 										/>
 									</div>
 									<h3 class="skills-detail-title">詳細技能</h3>
-									<ul class="skills-detail-list">
-										<li v-for="(s, i) in skills" :key="i">
-											<span>{{ s.name }}</span>
-											<div class="prosal">
-												<div :class="['inner-prosal', s.barClass]"></div>
-											</div>
-										</li>
-									</ul>
+									<div class="skills-tags">
+										<span v-for="(s, i) in skills" :key="i" class="skill-tag">
+											{{ s.name }}
+										</span>
+									</div>
 									<h2>Project Experiences</h2>
 									<ul class="ullinkstyle">
 										<li v-for="p in projects" :key="p.title">
@@ -983,63 +980,41 @@ body {
   text-align: left;
 }
 
-/* Skills Detail List */
-.skills-detail-list {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 40px;
-}
-
-.skills-detail-list li {
+/* Skills Tags */
+.skills-tags {
   display: flex;
-  align-items: center;
-  margin-bottom: 16px;
-  gap: 15px;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 60px;
 }
 
-.skills-detail-list li span {
-  min-width: 120px;
+.skill-tag {
+  display: inline-block;
+  padding: 10px 20px;
+  background: rgba(250, 213, 77, 0.1);
+  border: 1px solid rgba(250, 213, 77, 0.3);
+  border-radius: 6px;
   color: #d9d9d9;
   font-size: 15px;
   font-weight: 500;
+  transition: all 0.3s ease;
 }
 
-.skills-detail-list .prosal {
-  flex: 1;
-  height: 8px;
-  background: rgba(255, 255, 255, 0.08);
-  border-radius: 10px;
-  overflow: hidden;
-  position: relative;
+.skill-tag:hover {
+  background: rgba(250, 213, 77, 0.2);
+  border-color: #FAD54D;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(250, 213, 77, 0.2);
 }
-
-.skills-detail-list .inner-prosal {
-  height: 100%;
-  background: #FAD54D;
-  border-radius: 10px;
-  transition: width 0.3s ease;
-}
-
-/* Skill bar widths */
-.skills-detail-list .nightfive { width: 95%; }
-.skills-detail-list .eight { width: 80%; }
-.skills-detail-list .eightfive { width: 85%; }
-.skills-detail-list .seveneight { width: 78%; }
-.skills-detail-list .seven { width: 70%; }
 
 @media screen and (max-width: 600px) {
-  .skills-detail-list li {
-    flex-direction: column;
-    align-items: flex-start;
+  .skills-tags {
     gap: 8px;
   }
 
-  .skills-detail-list li span {
-    min-width: auto;
-  }
-
-  .skills-detail-list .prosal {
-    width: 100%;
+  .skill-tag {
+    padding: 8px 16px;
+    font-size: 14px;
   }
 }
 </style>
