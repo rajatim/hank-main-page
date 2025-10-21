@@ -73,6 +73,15 @@
 											textColor="#d9d9d9"
 										/>
 									</div>
+									<h3 class="skills-detail-title">詳細技能</h3>
+									<ul class="skills-detail-list">
+										<li v-for="(s, i) in skills" :key="i">
+											<span>{{ s.name }}</span>
+											<div class="prosal">
+												<div :class="['inner-prosal', s.barClass]"></div>
+											</div>
+										</li>
+									</ul>
 									<h2>Project Experiences</h2>
 									<ul class="ullinkstyle">
 										<li v-for="p in projects" :key="p.title">
@@ -171,7 +180,19 @@ export default {
       'HTML': 95,
       'Jquery': 78,
       'Vue.js': 70
-    }, 
+    },
+    skills: [
+      { name: 'Sketch',      barClass: 'nightfive' },
+      { name: 'Figma',       barClass: 'nightfive' },
+      { name: 'Adobe XD',    barClass: 'eight' },
+      { name: 'Axure RP',    barClass: 'eight' },
+      { name: 'Photoshop',   barClass: 'eightfive' },
+      { name: 'Illustrator', barClass: 'eightfive' },
+      { name: 'CSS3',        barClass: 'nightfive' },
+      { name: 'HTML',        barClass: 'nightfive' },
+      { name: 'Jquery',      barClass: 'seveneight' },
+      { name: 'Vue.js',      barClass: 'seven' }
+    ],
     projects: [
       { title: '全家APP 遊戲中心 UI/UX Design',  },
       { title: '八方雲集 Website UI/UX Design', to: '/po0015' },
@@ -931,7 +952,7 @@ body {
   width: 100%;
   max-width: 500px;
   height: 400px;
-  margin: 30px auto;
+  margin: 30px auto 40px;
   padding: 20px;
   background: rgba(255, 255, 255, 0.02);
   border-radius: 12px;
@@ -950,6 +971,75 @@ body {
   .skills-radar-container {
     height: 300px;
     padding: 10px;
+  }
+}
+
+/* Skills Detail Title */
+.skills-detail-title {
+  font-size: 18px;
+  color: #FAD54D;
+  font-weight: 700;
+  margin: 30px 0 20px;
+  text-align: left;
+}
+
+/* Skills Detail List */
+.skills-detail-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px;
+}
+
+.skills-detail-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  gap: 15px;
+}
+
+.skills-detail-list li span {
+  min-width: 120px;
+  color: #d9d9d9;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.skills-detail-list .prosal {
+  flex: 1;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.skills-detail-list .inner-prosal {
+  height: 100%;
+  background: #FAD54D;
+  border-radius: 10px;
+  transition: width 0.3s ease;
+}
+
+/* Skill bar widths */
+.skills-detail-list .nightfive { width: 95%; }
+.skills-detail-list .eight { width: 80%; }
+.skills-detail-list .eightfive { width: 85%; }
+.skills-detail-list .seveneight { width: 78%; }
+.skills-detail-list .seven { width: 70%; }
+
+@media screen and (max-width: 600px) {
+  .skills-detail-list li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .skills-detail-list li span {
+    min-width: auto;
+  }
+
+  .skills-detail-list .prosal {
+    width: 100%;
   }
 }
 </style>
