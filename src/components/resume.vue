@@ -65,14 +65,14 @@
 										</ul>
 									</section>
 									<h2>Skills</h2>
-									<ul>
-										<li v-for="(s, i) in skills" :key="i">
-											<span>{{ s.name }}</span>
-											<div class="prosal">
-												<div :class="['inner-prosal', s.barClass]"></div>
-											</div>
-										</li>
-									</ul>
+									<div class="skills-radar-container">
+										<SkillsRadar
+											:skills="skillsData"
+											color="#FAD54D"
+											gridColor="rgba(255,255,255,0.12)"
+											textColor="#d9d9d9"
+										/>
+									</div>
 									<h2>Project Experiences</h2>
 									<ul class="ullinkstyle">
 										<li v-for="p in projects" :key="p.title">
@@ -154,23 +154,24 @@
 <script>
 import TitleTemp from "./card/TitleTemp.vue";
 import ModalTemp from "./card/ModalTemp.vue";
+import SkillsRadar from "./SkillsRadar.vue";
 import $ from "jquery";
 export default {
   name: "images",
   data() {
     return {
-        skills: [
-      { name: 'Sketch',      barClass: 'nightfive' },
-      { name: 'Figma',       barClass: 'nightfive' },
-      { name: 'Adobe XD',    barClass: '' },
-      { name: 'Axure RP',    barClass: '' },
-      { name: 'Photoshop',   barClass: '' },
-      { name: 'Illustrator', barClass: '' },
-      { name: 'CSS3',        barClass: 'nightfive' },
-      { name: 'HTML',        barClass: 'nightfive' },
-      { name: 'Jquery',      barClass: 'seveneight' },
-      { name: 'Vue.js',      barClass: 'seven' }
-    ], 
+        skillsData: {
+      'Sketch': 95,
+      'Figma': 95,
+      'Adobe XD': 80,
+      'Axure RP': 80,
+      'Photoshop': 85,
+      'Illustrator': 85,
+      'CSS3': 95,
+      'HTML': 95,
+      'Jquery': 78,
+      'Vue.js': 70
+    }, 
     projects: [
       { title: '全家APP 遊戲中心 UI/UX Design',  },
       { title: '八方雲集 Website UI/UX Design', to: '/po0015' },
@@ -355,7 +356,8 @@ export default {
   },
   components: {
     TitleTemp: TitleTemp,
-    ModalTemp: ModalTemp
+    ModalTemp: ModalTemp,
+    SkillsRadar: SkillsRadar
   }
 };
 </script>
@@ -922,5 +924,32 @@ body {
 }
 .span-wrap{
   display:flex;
+}
+
+/* Skills Radar Chart */
+.skills-radar-container {
+  width: 100%;
+  max-width: 500px;
+  height: 400px;
+  margin: 30px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 12px;
+  border: 1px solid rgba(250, 213, 77, 0.1);
+}
+
+@media screen and (max-width: 768px) {
+  .skills-radar-container {
+    height: 350px;
+    max-width: 100%;
+    padding: 15px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .skills-radar-container {
+    height: 300px;
+    padding: 10px;
+  }
 }
 </style>
