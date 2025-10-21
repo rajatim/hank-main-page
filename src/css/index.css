@@ -1,0 +1,297 @@
+/* reset */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*fz */
+a, p, h1, h2, h3, h4, h5, h6, div, ul, li, label, input {
+  font-family: "Avenir" !important;
+  letter-spacing: 1px;
+}
+
+  .right-bar{
+    width: calc(100% - 290px);
+    margin-left: auto;
+    transition: 1.5s;
+  }
+  .right-bar.active{
+    filter: blur(50px);
+    transition: 1.5s;
+  }
+  @media screen and (max-width: 1150px) {
+    .right-bar{
+      width: 100%;
+      margin-left: auto;
+      padding-top: 70px!important;
+    }
+  }
+  @media screen and (max-width: 680px) {
+    .right-bar{
+      width: 100%;
+      margin-left: auto;
+      padding: 20px!important;
+    }
+
+  }
+
+  body{
+  margin: 0px;
+  /* overflow: hidden; */
+  padding: 0px;
+}
+/* slide-bar */
+.logotitle{
+    color:#fff;
+    font-weight: 900;
+    font-size: 42px;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    letter-spacing: -1px;
+    text-align: left;
+    padding-left: 20px;
+  }
+  
+  .logotitle span{
+    color:#FAD54D;
+  }
+  @media screen and (max-width: 600px) {
+    .logotitle{
+      font-size: 32px;
+    }
+  }
+  #app {
+    margin: 0px;
+    padding: 0px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    display: flex;
+    flex-direction: row;
+  }
+  .left-bar{
+    position: fixed;
+    left:0px;
+    top:0px;
+    width:250px;
+    height: 100vh;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 80px;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .left-bar img{
+    width:160px;
+    margin-top: 50px;
+    margin-bottom: 150px;
+  }
+  .left-bar .title,.left-bar ul{
+    max-width: 180px;
+    width:100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .left-bar .title h2{
+    text-align: left;
+    font-weight: 900;
+    color:#fff;
+    font-size: 16px;
+    line-height: 70px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+  .left-bar .title h2.active{
+    color:#FAD54D; 
+  }
+  .left-bar ul{
+    padding-left: 15px;
+    border-left: 1px solid rgba(255, 255, 255, 0.303);
+
+  
+  }
+  .left-bar ul li{
+    line-height: 60px;
+    text-align: left;
+  }
+  
+  .left-bar ul li a{
+    text-decoration: none;
+    color:#fff;
+    font-size: 18px;
+  }
+  .mobile-meni-btn{
+    color:#fff;
+    font-size: 16px;
+    position: fixed;
+    left:0px;
+    top:0px;
+    display: none;
+    background-color: #000;
+    width:100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: left;
+    padding-left: 30px;
+    padding-right: 30px;
+    transition: 1s;
+    transform: translateY(0px);
+  }
+  .mobile-meni-btn.active{
+    transform: translateY(-75px);
+    transition: 1s;
+  }
+  .mobile-meni-btn a{
+    text-decoration: none;
+  }
+  .menu-btn{
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+    background-color: #484848;
+    border-radius: 100%;
+  }
+  .menu-btn img{
+    width: 40%;
+  }
+  @media screen and (max-width: 1150px) {
+    .left-bar{
+      display: none;
+    }
+    .transition-style{
+      max-width: 500px;
+      width:100%;
+    }
+    .mobile-meni-btn{
+      display: flex;
+      justify-content: space-between;
+      z-index: 9999999;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      height: auto;
+    }
+    
+  }
+  .mologo-t{
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding-left: 0px;
+  }
+/* 首頁 */
+/* 作品內頁 */
+.title-hank-wrap{
+  width:100%;
+  /* background-image: url(http://www.hank.url.tw/img/background.png); */
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: left center;
+  /* padding-top: 0px; */
+  padding: 40px;
+  padding-bottom: 85px;
+}
+.right-bar{
+  padding: 0px;
+  box-sizing: border-box;
+}
+.right-bar .title-hank-wrap h2{
+  font-size: 36px;
+  color:#fff;
+  text-align: left;
+  color:#FAD54D;
+}
+.right-bar .title-hank-wrap h2 span{
+    font-size: 15px;
+    margin-left: 10px;
+}
+.right-bar .title-h1{
+  color:#fff;
+  font-weight: 900;
+  text-align: left;
+}
+.right-bar .title-h1 span{
+  display: block;
+}
+.title-hank-wrap p{
+  color:#fff;
+  font-size: 14px;
+  text-align: left;
+}
+.btn-style{
+  width: 200px;
+  border-radius: 50px;
+  height: 45px;
+  background-color: #FAD54D;
+  border:none;
+  display: block;
+  margin-top: 40px;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+.inner-page{
+    width:100%;
+}
+.inner-page img{
+    width: 100%;
+}
+.deleted-wrap{
+  border:0.1px solid #000;
+  position: fixed;
+  right:50px;
+  width:50px;
+  overflow: hidden;
+  padding:12px;
+  height:50px;
+  cursor: pointer;
+}
+.deleted-wrap img{
+  width:100%;
+}
+

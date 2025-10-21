@@ -1,0 +1,41 @@
+.title-hank-wrap{
+    width:100%;
+    background-image: url(http://www.hank.url.tw/img/bgjjj.jpg);
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: left center;
+    /* padding-top: 0px; */
+    padding: 40px;
+    padding-bottom: 85px;
+  }
+  .right-bar{
+    padding: 0px;
+    box-sizing: border-box;
+  }
+  .right-bar .title-h1{
+    color:#fff;
+    font-weight: 900;
+    font-family: 'Arial Black'!important;
+    text-align: left;
+    font-size: 46px;;
+    line-height: 55px;
+    letter-spacing: -1px;
+  }
+  .right-bar .title-h1 span{
+    display: block;
+  }
+  .title-hank-wrap p{
+    color:#fff;
+    font-size: 14px;
+    text-align: left;
+    margin-top: -20px;
+  }
+  .btn-style{
+    width: 200px;
+    border-radius: 50px;
+    height: 45px;
+    background-color: #FAD54D;
+    border:none;
+    display: block;
+    margin-top: 40px;
+  }
