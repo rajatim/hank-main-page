@@ -382,17 +382,6 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 @import "../css/experience.css";
-
-/* === 間距系統 (8px 基礎單位) === */
-:root {
-  --space-xs: 8px;    /* 微小間距 */
-  --space-sm: 16px;   /* 小間距 */
-  --space-md: 24px;   /* 中間距（段落） */
-  --space-lg: 40px;   /* 大間距（子區塊） */
-  --space-xl: 80px;   /* 超大間距（主區塊） */
-  --space-2xl: 120px; /* 巨大間距（Hero） */
-}
-
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -415,20 +404,20 @@ export default {
 .section-title{
   font-size: 15px;
   font-weight: 400;
-  margin: var(--space-sm) 0 var(--space-xs);  /* 16px 上, 8px 下 */
+  margin: 12px 0 8px;
   color: rgb(143, 143, 143);
-  margin-bottom: var(--space-sm);  /* 16px */
+  margin-bottom:12px;
 }
 .mt-24{ margin-top: 24px; }
 
 .bullets{
   list-style: none;
   padding: 0;
-  margin: 0 0 var(--space-sm);  /* 16px - 列表區塊下方 */
+  margin: 0 0 12px;
 }
 .bullets li{
   line-height: 1.9;
-  margin-bottom: var(--space-sm);  /* 16px - 列表項之間 */
+  margin-bottom: 6px;
   white-space: normal;
   word-break: break-word;
 }
@@ -639,7 +628,7 @@ h2.title-style {
 }
 .company-infor p {
   margin-top: 0px;
-  margin-bottom: var(--space-md);  /* 24px - 段落間距 */
+  margin-bottom: 20px;
   line-height: 32px;
 }
 @media screen and (max-width: 1024px) {
@@ -832,12 +821,8 @@ h2 {
   font-size: 32px;
   font-weight: 700;
   letter-spacing: 1px;
-  margin-bottom: var(--space-lg);  /* 40px - 標題下方大間距 */
+  margin-bottom: 40px;
   color: #fff;
-}
-
-h2:not(:first-of-type) {
-  margin-top: var(--space-xl);     /* 80px - 主區塊之間超大間距 */
 }
 
 h3 {
@@ -862,7 +847,7 @@ h3 {
 .highlight {
   color: #ffffff;
   font-size:16px;
-  margin-bottom: var(--space-md);  /* 24px - 段落間距 */
+  margin-bottom: 24px;
 }
 
 .sub-title {
@@ -879,7 +864,7 @@ h3 {
 }
 
 .achievement-list li {
-  margin-bottom: var(--space-md);  /* 24px - 列表項間距 */
+  margin-bottom: 18px;
   font-size: 16px;
   color: #d9d9d9;
   line-height: 1.8;
@@ -897,8 +882,8 @@ h3 {
 .hero {
   display: flex;
   align-items: center;
-  gap: var(--space-md);  /* 24px - 照片與文字間距 */
-  margin: var(--space-xs) 0 var(--space-lg); /* 8px 上, 40px 下 */
+  gap: 24px;
+  margin: 8px 0 28px; /* 與下方內容留白 */
 }
 
 .hero__photo {
@@ -923,7 +908,7 @@ h3 {
 
 .hero__text .mb-40 {
   display: block;
-  margin-top: var(--space-xs);  /* 8px - 名稱與職稱間距 */
+  margin-top: 8px;
   color: #a6a6a6;
   font-size: clamp(14px, 1.8vw, 18px);
 }
@@ -951,10 +936,10 @@ h3 {
 }
 
 .bullets li strong {
-  display: block;
+  display: block;           /* ← 關鍵：變區塊就會自動換行 */
   color: #FAD54D;
   font-weight: 900;
-  margin-bottom: var(--space-xs);  /* 8px - 標籤與描述之間的間距 */
+  margin-bottom: 4px;        /* 標籤與描述之間的間距 */
   line-height: 1.4;
   font-size:15px;
 }
@@ -962,7 +947,7 @@ h3 {
 /* 列表本體的行高與間距可以微調更好讀 */
 .bullets li {
   line-height: 1.9;
-  margin-bottom: var(--space-sm);  /* 16px - 列表項間距 */
+  margin-bottom: 12px;
   font-size:16px;
   color:#d9d9d9;
 }
@@ -978,8 +963,8 @@ h3 {
   width: 100%;
   max-width: 500px;
   height: 400px;
-  margin: var(--space-lg) auto var(--space-lg);  /* 40px 上下 */
-  padding: var(--space-md);  /* 24px - 內部留白 */
+  margin: 30px auto 40px;
+  padding: 20px;
   background: rgba(255, 255, 255, 0.02);
   border-radius: 12px;
   border: 1px solid rgba(250, 213, 77, 0.1);
@@ -1005,7 +990,7 @@ h3 {
   font-size: 18px;
   color: #FAD54D;
   font-weight: 700;
-  margin: var(--space-lg) 0 var(--space-md);  /* 40px 上, 24px 下 */
+  margin: 30px 0 20px;
   text-align: left;
 }
 
@@ -1013,8 +998,8 @@ h3 {
 .skills-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-sm);  /* 16px - 標籤之間間距 */
-  margin-bottom: var(--space-xl);  /* 80px - 與下個區塊大間距 */
+  gap: 12px;
+  margin-bottom: 60px;
 }
 
 .skill-tag {
@@ -1038,11 +1023,11 @@ h3 {
 
 @media screen and (max-width: 600px) {
   .skills-tags {
-    gap: var(--space-xs);  /* 8px - 小螢幕標籤間距 */
+    gap: 8px;
   }
 
   .skill-tag {
-    padding: var(--space-xs) var(--space-sm);  /* 8px 16px */
+    padding: 8px 16px;
     font-size: 14px;
   }
 }
