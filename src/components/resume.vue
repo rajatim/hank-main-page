@@ -817,6 +817,20 @@ body {
   padding: 40px;
 }
 
+h2 {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+  color: #fff;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #FAD54D;
+}
+
 .resume-section {
   max-width: 1024px;
   margin: auto;
@@ -884,8 +898,8 @@ body {
 }
 
 .hero__text h1 {
-  font-size: clamp(40px, 7vw, 108px); /* 你的大標會隨寬度縮放 */
-  line-height: 0.95;
+  font-size: 48px;
+  line-height: 1.2;
   margin: 0;
   font-weight: 900;
   color: #fff;
