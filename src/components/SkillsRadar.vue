@@ -84,15 +84,20 @@ export default {
               min: 0,
               max: 100,
               stepSize: 20,
-              fontColor: this.gridColor,
-              backdropColor: 'rgba(0,0,0,0)'
+              fontColor: '#888',               // 提升對比度
+              fontSize: 11,                    // 保持適當大小
+              backdropColor: 'rgba(0,0,0,0.8)', // 添加半透明背景避免重疊
+              backdropPadding: 4               // 背景內距
             },
             pointLabels: {
               fontColor: this.textColor,
-              fontSize: 12
+              fontSize: 14,                     // 從 12 提升到 14
+              fontFamily: "'Noto Sans TC', sans-serif",
+              padding: 20                       // 增加與圖表的距離
             },
             gridLines: {
-              color: this.gridColor
+              color: 'rgba(250, 213, 77, 0.1)', // 使用品牌色微調透明度
+              lineWidth: 1
             },
             angleLines: {
               color: this.gridColor
