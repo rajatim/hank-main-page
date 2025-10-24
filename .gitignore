@@ -12,3 +12,31 @@ yarn-error.log*
 *.ntvs*
 *.njsproj
 *.sln
+*.swp
+*.swo
+*~
+
+# 環境變數
+.env
+.env.local
+.env.*.local
+
+# 敏感檔案
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.json
+secrets.yaml
+*_secret*
+*_private*
+
+# Python（如需要）
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# 其他日誌
+*.log
+logs/

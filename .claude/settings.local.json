@@ -1,0 +1,34 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nfeat: initialize Vue.js portfolio project\n\n- Remove LICENSE file\n- Update README with Vue.js project documentation\n- Add .gitignore for node_modules and system files\n- Add complete Vue.js project structure with webpack build config\n- Add portfolio components and static assets\n- Add skills radar and resume components\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git push:*)",
+      "Bash(find:*)",
+      "Bash(git reset:*)",
+      "Bash(brew install:*)",
+      "Bash(git lfs install:*)",
+      "Bash(git lfs track:*)",
+      "Bash(git lfs ls-files:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nfeat: initialize Vue.js portfolio project with Git LFS\n\n- Remove LICENSE file\n- Update README with Vue.js project documentation\n- Add .gitignore for node_modules and system files\n- Configure Git LFS for large image files\n- Add complete Vue.js project structure with webpack build config\n- Add portfolio components and static assets\n- Add skills radar and resume components\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git commit:*)",
+      "Bash(npm run dev:*)",
+      "Bash(nvm --version:*)",
+      "Bash(docker:*)",
+      "Bash(curl:*)",
+      "Bash(cat:*)",
+      "Bash(npx --version)",
+      "Bash(dependabot/npm_and_yarn/cipher-base-1.0.7 )",
+      "Bash(dependabot/npm_and_yarn/elliptic-6.6.1 )",
+      "Bash(dependabot/npm_and_yarn/multi-96c788614a )",
+      "Bash(dependabot/npm_and_yarn/pbkdf2-3.1.5 )",
+      "Bash(dependabot/npm_and_yarn/sha.js-2.4.12 )",
+      "Bash(dependabot/npm_and_yarn/vue-3.0.0 )",
+      "Bash(dependabot/npm_and_yarn/webpack-dev-server-5.2.1)",
+      "Bash(npm install:*)",
+      "Bash(git revert:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
